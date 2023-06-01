@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.header("Salary and Experience Bar Graph")
+st.header("Salary and Experience Bar Chart")
 
 # Sample data for salary and experience
 data = {"Experience": [1, 3, 5, 2, 4],
@@ -13,4 +13,4 @@ df = pd.DataFrame(data)
 st.write(df)
 
 # Create a bar chart using the salary and experience data
-st.bar_chart(data=df, x="Experience", y="Salary", color="blue", height=400)
+st.bar_chart(data=df, x="Experience", y="Salary")
