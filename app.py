@@ -1,11 +1,17 @@
 import streamlit as st
 import pandas as pd
 
-st.header("Bar Chart")
+st.header("Bar Chart with Complex Equation")
 
-data = {"a":[23, 12, 78, 4, 54], "b":[0, 13 ,88, 1, 3], 
-"c":[45, 2, 546, 67, 56]}
+# Generate sample data using a complex equation
+x = range(1, 11)
+y = [2 * (n ** 2) + 3 * n + 5 for n in x]
 
+data = {"x": x, "y": y}
 df = pd.DataFrame(data)
-df
-st.bar_chart(data=df)
+
+# Display the DataFrame
+st.write(df)
+
+# Create a bar chart using the generated data
+st.bar_chart(data=df, x="x", y="y")
